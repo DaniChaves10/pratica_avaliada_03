@@ -7,6 +7,8 @@ public class Usuario {
 	
 	
 	public Usuario(String nome, String email) {
+		Validacao.validarNome(nome);
+		Validacao.validarEmail(email);
 		this.nome = nome;
 		this.email = email;
 	}
