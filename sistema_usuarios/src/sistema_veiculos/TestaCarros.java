@@ -201,7 +201,7 @@ public class TestaCarros {
     public static void testarBateriaNegativa() {
         System.out.println("\n--- Teste 4: Nível de Bateria Inicial Negativo (-10%) ---");
         try {
-            CarroEletrico quebrado = new CarroEletrico("Renault Kwid E-Tech", 0, -10);
+            new CarroEletrico("Renault Kwid E-Tech", 0, -10);
         } catch (IllegalArgumentException error) {
             System.out.println("Sucesso no teste de erro -> Pegou a exceção: " + error.getMessage());
         }
@@ -210,7 +210,7 @@ public class TestaCarros {
     public static void testarBateriaAcimaLimite() {
         System.out.println("\n--- Teste 5: Nível de Bateria Inicial Acima de 100% (150%) ---");
         try {
-            CarroEletrico sobrecarregado = new CarroEletrico("Audi e-tron", 0, 150);
+            new CarroEletrico("Audi e-tron", 0, 150);
         } catch (IllegalArgumentException error) {
             System.out.println("Sucesso no teste de erro -> Pegou a exceção: " + error.getMessage());
         }
